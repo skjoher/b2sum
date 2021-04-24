@@ -8,6 +8,16 @@ jobs:
   build:
     name: GoReleaser build
     runs-on: ubuntu-latest
+    goos:
+      - linux
+    goarch:
+      - arm
+      - arm64
+      - amd64
+      - 386
+    goarm:
+      - 6
+      - 7
 
     steps:
       - name: Check out code into the Go module directory
